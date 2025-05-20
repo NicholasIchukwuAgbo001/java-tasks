@@ -77,12 +77,24 @@ return CurrentState.EMPTY;
 
     }
 
-    public CurrentState isFull(){
-        if(board.length == 9){
-            throw new RuntimeException("Is Full");
+    private boolean isBoardFull() {
+        for (int rows = 0; rows < 3; rows++) {
+            for (int cols = 0; cols < 3; cols++) {
+                if (board[rows][cols] == CurrentState.EMPTY) {
+                    return false;
+                }
+            }
         }
-        return CurrentState.EMPTY;
+        return true;
     }
+
+    public boolean isTie() {
+        return isBoardFull() && checkWinner() == CurrentState.EMPTY;
+    }
+
+
+
+
 
 
 }

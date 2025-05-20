@@ -43,9 +43,9 @@ public class Main {
                 break;
             }
 
-            if(game.isFull() != CurrentState.EMPTY) {
+            if(game.isTie()) {
                 game.printBoard();
-                System.out.println("\nTIE");
+                System.out.println("\n Is TIE");
                 break;
             }
 

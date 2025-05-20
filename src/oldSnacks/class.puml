@@ -1,0 +1,42 @@
+@startuml
+class User {
+    - id: int
+    - username: str
+    - password: str
+    - role: str
+}
+
+class Student {
+    - courses: list
+}
+
+class Instructor {
+    - courses: list
+}
+
+class Course {
+    - id: int
+    - name: str
+    - instructor: Instructor
+    - students: list
+}
+
+class CourseManagementSystem {
+    - users: list
+    - courses: list
+    + register_user(user: User)
+    + create_course(course: Course)
+    + enroll_student(student: Student, course: Course)
+    + assign_grade(student: Student, course: Course, grade: str)
+    + view_courses(student: Student)
+    + view_students(course: Course)
+}
+
+User <|-- Student
+User <|-- Instructor
+CourseManagementSystem *-- User
+CourseManagementSystem *-- Course
+Course *-- Instructor
+Course *-- Student
+
+@enduml
