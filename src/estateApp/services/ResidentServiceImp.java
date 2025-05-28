@@ -1,4 +1,4 @@
-package estateApp.dtos.services;
+package estateApp.services;
 
 import estateApp.dtos.requests.RegisterResidentRequest;
 import estateApp.dtos.responses.RegisterResidentResponse;

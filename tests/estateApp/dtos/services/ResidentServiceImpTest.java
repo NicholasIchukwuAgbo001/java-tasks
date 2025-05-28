@@ -4,6 +4,8 @@ import estateApp.dtos.requests.RegisterResidentRequest;
 import estateApp.dtos.responses.RegisterResidentResponse;
 import estateApp.data.repository.ResidentRepository;
 import estateApp.data.repository.Residents;
+import estateApp.services.ResidentServiceImp;
+import estateApp.services.ResidentServices;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
