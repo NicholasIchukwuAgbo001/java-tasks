@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,7 +14,12 @@ class ResidentsTest {
 
     @BeforeEach
     void setUp() {
-        residents = new Residents();
+        residents = new Residents() {
+            @Override
+            public Optional<Resident> findByResidentEmail(String email) {
+                return Optional.empty();
+            }
+        };
     }
 
     @Test

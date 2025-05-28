@@ -1,6 +1,8 @@
-package estateApp.dtos.services;
+package estateApp.services;
 
+import estateApp.dtos.requests.LoginResidentRequest;
 import estateApp.dtos.requests.RegisterResidentRequest;
+import estateApp.dtos.responses.LoginResidentResponse;
 import estateApp.dtos.responses.RegisterResidentResponse;
 import estateApp.data.model.Resident;
 import estateApp.data.repository.ResidentRepository;
@@ -27,5 +29,10 @@ public class ResidentServiceImp implements ResidentServices {
         response.setFullName(resident.getName());
 
         return response;
+    }
+
+    @Override
+    public LoginResidentResponse login(LoginResidentRequest residentServiceRequest) {
+        return null;
     }
 }

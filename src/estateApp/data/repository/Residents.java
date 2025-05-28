@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class Residents implements ResidentRepository {
+public abstract class Residents implements ResidentRepository {
     private List<Resident> residents = new ArrayList<>();
     private int currentId = 0;
 
